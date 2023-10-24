@@ -26,6 +26,6 @@ window.addEventListener('load', () => {
     e.preventDefault();
     e.stopPropagation();
     const specialKeys = parseSpecialKeys(e);
-    output.innerText = `${specialKeys.length > 0 ? specialKeys.join(' ') : ''} ${specialKeys.includes(e.key) ? '' : e.key}`
+    output.innerText = `${specialKeys.length > 0 ? specialKeys.join(' ') : ''}${specialKeys.includes(e.key) ? '' : ' "' + e.key + '"'}`
   })
 })
